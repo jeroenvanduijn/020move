@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased;
+}
+
+/* Custom focus styles for accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-cfl-orange;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-padding-top: 2rem;
+}
