@@ -43,7 +43,6 @@ const membershipOptions: MembershipOption[] = [
     price: '€129,-',
     perTraining: { nl: '€4,96 per training (6x/wk)', en: '€4.96 per session (6x/wk)' },
     credits: { nl: 'Onbeperkt', en: 'Unlimited' },
-    highlight: true,
   },
 ];
 
