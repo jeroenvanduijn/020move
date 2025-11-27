@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Script from 'next/script';
 import {
   Header,
   Footer,
@@ -295,7 +296,7 @@ export default function MembershipPage() {
       {/* ============================================
           GHL FORM SECTION
           ============================================ */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20" id="aanmeldformulier">
         <div className="max-w-content mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-cfl-dark mb-3 text-center">
             {copy.formSection.title[lang]}
@@ -304,31 +305,39 @@ export default function MembershipPage() {
             {copy.formSection.subtitle[lang]}
           </p>
 
-          {/* GHL Form Placeholder */}
+          {/* GHL Form Embed */}
           <div
-            id="ghl-form-placeholder"
-            className="bg-cfl-gray-light rounded-xl border-2 border-dashed border-cfl-gray-medium p-12 text-center mt-10"
+            id="ghl-form-container"
+            className="bg-white rounded-xl overflow-hidden"
+            style={{ minHeight: '1800px' }}
           >
-            <div className="text-gray-400">
-              <svg
-                className="w-16 h-16 mx-auto mb-4 opacity-50"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              <p className="text-lg font-medium mb-2">GHL Form Placeholder</p>
-              <p className="text-sm">
-                GHL embed code will be inserted here manually.
-              </p>
-            </div>
+            <iframe
+              src="https://kilo.gymleadmachine.com/widget/form/UwByW99AgEZew0dVsYNy"
+              style={{
+                width: '100%',
+                height: '1800px',
+                border: 'none',
+                borderRadius: '3px',
+              }}
+              id="inline-UwByW99AgEZew0dVsYNy"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Mobilis Form"
+              data-height="1797"
+              data-layout-iframe-id="inline-UwByW99AgEZew0dVsYNy"
+              data-form-id="UwByW99AgEZew0dVsYNy"
+              title="Mobilis Form"
+            />
           </div>
+          <Script
+            src="https://kilo.gymleadmachine.com/js/form_embed.js"
+            strategy="lazyOnload"
+          />
         </div>
       </section>
 
