@@ -1,12 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 // ============================================
 // Type Definitions
 // ============================================
 export type Language = 'nl' | 'en';
+
+// ============================================
+// Constants
+// ============================================
+export const EMAIL = 'info@crossfit020.nl';
 
 // ============================================
 // Shared Header Component
@@ -78,6 +83,28 @@ export function CheckIcon({ className = 'w-5 h-5' }: { className?: string }) {
 }
 
 // ============================================
+// Calendar Icon Component
+// ============================================
+export function CalendarIcon({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+      />
+    </svg>
+  );
+}
+
+// ============================================
 // CTA Button Component
 // ============================================
 interface CTAButtonProps {
@@ -138,8 +165,6 @@ export function Footer({ lang }: FooterProps) {
       nl: 'Heb je vragen? Mail ons op',
       en: 'Questions? Email us at',
     },
-    email: '[mailadres]',
-    footer: 'CrossFit 020 — Een onderdeel van CrossFit Leiden',
   };
 
   return (
@@ -150,10 +175,10 @@ export function Footer({ lang }: FooterProps) {
           <p className="text-lg text-gray-700">
             {copy.contact[lang]}{' '}
             <a
-              href={`mailto:${copy.email}`}
+              href={`mailto:${EMAIL}`}
               className="text-cfl-orange hover:underline font-medium"
             >
-              {copy.email}
+              {EMAIL}
             </a>
           </p>
         </div>
@@ -162,7 +187,7 @@ export function Footer({ lang }: FooterProps) {
       {/* Footer */}
       <footer className="py-8 bg-cfl-dark text-white">
         <div className="max-w-content mx-auto px-6 text-center">
-          <p className="text-sm text-gray-400">{copy.footer}</p>
+          <p className="text-sm text-gray-400">CrossFit 020</p>
         </div>
       </footer>
     </>
@@ -222,7 +247,7 @@ export function FAQAccordion({ item, lang, isOpen, onToggle }: FAQAccordionProps
 }
 
 // ============================================
-// FAQ Data (Updated with new logic)
+// FAQ Data (Updated with correct email and logic)
 // ============================================
 export const faqItems: FAQItem[] = [
   {
@@ -242,10 +267,10 @@ export const faqItems: FAQItem[] = [
       en: 'When is the last training day?',
     },
     answer: {
-      nl: 'De definitieve einddatum is [datum invullen]. Tot die datum blijven we open en draaien we de lessen zoals normaal.',
-      en: 'The final closing date is [insert date]. Until then, we remain open and classes continue as normal.',
+      nl: 'De laatste trainingsdag bij CrossFit 020 is vrijdag 20 december. Tot die datum blijven we open en draaien we de lessen zoals normaal.',
+      en: 'The last training day at CrossFit 020 is Friday 20 December. Until then, we remain open and classes continue as normal.',
     },
-    englishSummary: 'Last training day is [insert date].',
+    englishSummary: 'Last training day is Friday 20 December.',
   },
   {
     question: {
@@ -275,10 +300,10 @@ export const faqItems: FAQItem[] = [
       en: 'How exactly does the transition to Mobilis work?',
     },
     answer: {
-      nl: 'Je kiest nu je Mobilis membership en betaalt direct voor 2 maanden. Je krijgt 3 maanden trainen (1 maand gratis). Vanaf maand 4 loopt je membership automatisch verder via Mobilis, met een kalendermaand opzegtermijn.',
-      en: 'You choose your Mobilis membership now and pay for 2 months upfront. You receive 3 months of training (1 month free). From month 4, your membership continues automatically at Mobilis with a one-calendar-month cancellation period.',
+      nl: 'Je kiest je Mobilis membership en betaalt direct voor 2 maanden. Je krijgt 3 maanden trainen (1 maand gratis). Je kiest zelf je startdatum: 21 december of een datum in januari. Vanaf maand 4 loopt je membership automatisch verder via Mobilis.',
+      en: 'You choose your Mobilis membership and pay for 2 months upfront. You receive 3 months of training (1 month free). You choose your own start date: 21 December or a date in January. From month 4, your membership continues automatically at Mobilis.',
     },
-    englishSummary: 'Pay 2 months upfront, train 3 months (1 free), then continues at Mobilis.',
+    englishSummary: 'Pay 2 months, train 3 months (1 free), choose your start date, then continues at Mobilis.',
   },
   {
     question: {
@@ -293,6 +318,17 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: {
+      nl: 'Tot wanneer kan ik me aanmelden voor deze actie?',
+      en: 'Until when can I sign up for this offer?',
+    },
+    answer: {
+      nl: 'Je moet je vóór vrijdag 19 december aanmelden, zodat we alles tijdig kunnen verwerken bij Mobilis.',
+      en: 'You need to sign up before Friday 19 December so we can process everything at Mobilis in time.',
+    },
+    englishSummary: 'Sign up before Friday 19 December.',
+  },
+  {
+    question: {
       nl: 'Waarom is Fabian geen nieuwe eigenaar geworden?',
       en: 'Why didn\'t Fabian become the new owner?',
     },
@@ -301,17 +337,6 @@ export const faqItems: FAQItem[] = [
       en: 'Fabian seriously considered taking over 020. Ultimately, he decided not to proceed. We fully respect this, but it means there is no one to continue the gym in Amsterdam.',
     },
     englishSummary: 'Fabian decided not to take over the gym.',
-  },
-  {
-    question: {
-      nl: 'Gaat CrossFit 020 definitief dicht of verhuizen jullie?',
-      en: 'Is CrossFit 020 closing permanently or relocating?',
-    },
-    answer: {
-      nl: 'De BV verhuist naar Leiden. Dat betekent dat CrossFit 020 in Amsterdam stopt, maar dat de onderneming op een nieuwe plek verder gaat.',
-      en: 'The company is relocating to Leiden. This means CrossFit 020 in Amsterdam will close, but the business continues at a new location.',
-    },
-    englishSummary: 'The company moves to Leiden; the Amsterdam location closes.',
   },
   {
     question: {
@@ -348,24 +373,13 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: {
-      nl: 'Kan ik mee naar Leiden?',
-      en: 'Can I join in Leiden?',
-    },
-    answer: {
-      nl: 'De afstand is voor de meeste leden niet realistisch, maar je bent altijd welkom wanneer de nieuwe locatie opent. We weten nog niet wanneer dat zal zijn.',
-      en: 'The distance isn\'t realistic for most members, but you\'re always welcome when the new location opens. We don\'t know the timeline yet.',
-    },
-    englishSummary: 'You\'re welcome in Leiden; timeline unknown.',
-  },
-  {
-    question: {
       nl: 'Hoe kan ik vragen stellen?',
       en: 'How can I ask questions?',
     },
     answer: {
-      nl: 'Mail ons op [mailadres]. We proberen iedereen zo snel mogelijk te helpen.',
-      en: 'Email us at [email]. We\'ll try to help everyone as quickly as possible.',
+      nl: `Mail ons op ${EMAIL}. We proberen iedereen zo snel mogelijk te helpen.`,
+      en: `Email us at ${EMAIL}. We'll try to help everyone as quickly as possible.`,
     },
-    englishSummary: 'Email us at [email].',
+    englishSummary: `Email us at ${EMAIL}.`,
   },
 ];

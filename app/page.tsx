@@ -5,6 +5,7 @@ import {
   Header,
   Footer,
   CheckIcon,
+  CalendarIcon,
   CTAButton,
   FAQAccordion,
   faqItems,
@@ -22,7 +23,7 @@ const copy = {
     },
     intro: {
       nl: 'We weten dat het sluiten van CrossFit 020 moeilijk nieuws is. Daarom hebben we een veilige, warme en zorgeloze overgang geregeld bij Mobilis CrossFit. Je kunt daar direct doortrainen, met een duidelijke overgangsperiode en zonder verwarring over kosten.',
-      en: 'We know the closing of CrossFit 020 is difficult news. To help you continue smoothly, we arranged a safe and clear transition at Mobilis CrossFit. You can start training there right away, with a simple transition setup and no confusion about costs.',
+      en: 'We know the closing of CrossFit 020 is difficult news. To help you continue without interruption, we arranged a smooth and clear transition at Mobilis CrossFit. You can start training right away, with no confusion about payments.',
     },
     cta: {
       nl: 'Kies je membership',
@@ -59,20 +60,36 @@ const copy = {
     steps: {
       nl: [
         'Je kiest nu je Mobilis membership.',
-        'Je betaalt direct voor 2 maanden.',
-        'Je krijgt 3 maanden trainen (1 maand gratis).',
-        'Vanaf maand 4 start je betaling automatisch via Mobilis.',
+        'Je betaalt direct voor 2 maanden en je krijgt 3 maanden trainen.',
+        'Je kiest zelf je startdatum (21 december of een datum in januari).',
+        'Deze actie is geldig t/m vrijdag 19 december.',
+        'Vanaf maand 4 start de automatische betaling via Mobilis.',
         'Vanaf maand 4 geldt een kalendermaand opzegtermijn.',
         'Vanaf maand 4 kun je upgraden of downgraden.',
       ],
       en: [
         'Choose your Mobilis membership now.',
-        'You pay for 2 months upfront.',
-        'You receive 3 months of training (1 month free).',
+        'You pay for 2 months and receive 3 months of training.',
+        'You can choose your own start date (21 December or a date in January).',
+        'This offer is valid until Friday 19 December.',
         'From month 4, automatic billing starts at Mobilis.',
         'From month 4, a one-calendar-month cancellation period applies.',
-        'From month 4, you may upgrade or downgrade your membership.',
+        'From month 4, you may upgrade or downgrade.',
       ],
+    },
+  },
+  startDate: {
+    title: {
+      nl: 'Kies je startdatum',
+      en: 'Choose your start date',
+    },
+    text: {
+      nl: 'Je kunt zelf je eerste dag kiezen. Wil je al starten op 21 december, of liever in januari? Beide kan. Zorg er wel voor dat je vóór vrijdag 19 december bent aangemeld, zodat we alles tijdig kunnen verwerken.',
+      en: 'You can choose your own start date. Want to begin on 21 December, or rather in January? Both are possible. Just complete your sign-up before Friday 19 December so we can process everything in time.',
+    },
+    options: {
+      nl: ['Start 21 december', 'Start in januari'],
+      en: ['Start 21 December', 'Start in January'],
     },
   },
   ctaSection: {
@@ -177,9 +194,39 @@ export default function LandingPage() {
       </section>
 
       {/* ============================================
-          CTA SECTION
+          START DATE SECTION
           ============================================ */}
       <section className="py-16 md:py-20 bg-cfl-gray-light">
+        <div className="max-w-content mx-auto px-6">
+          <div className="flex items-center gap-3 mb-6">
+            <CalendarIcon className="w-8 h-8 text-cfl-orange" />
+            <h2 className="text-3xl md:text-4xl font-bold text-cfl-dark">
+              {copy.startDate.title[lang]}
+            </h2>
+          </div>
+
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            {copy.startDate.text[lang]}
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            {copy.startDate.options[lang].map((option, index) => (
+              <div
+                key={index}
+                className="inline-flex items-center gap-2 bg-white border border-cfl-gray-medium rounded-lg px-5 py-3"
+              >
+                <CheckIcon className="w-5 h-5 text-cfl-orange" />
+                <span className="font-medium text-cfl-dark">{option}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+          CTA SECTION
+          ============================================ */}
+      <section className="py-16 md:py-20">
         <div className="max-w-content mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-cfl-dark mb-8">
             {copy.ctaSection.title[lang]}
@@ -192,7 +239,7 @@ export default function LandingPage() {
       {/* ============================================
           FAQ SECTION
           ============================================ */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-cfl-gray-light">
         <div className="max-w-content mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-cfl-dark mb-2">
             {copy.faq.title[lang]}

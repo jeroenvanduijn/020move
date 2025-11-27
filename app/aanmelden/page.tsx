@@ -5,12 +5,12 @@ import {
   Header,
   Footer,
   CheckIcon,
-  CTAButton,
+  CalendarIcon,
   type Language,
 } from '../../components/shared';
 
 // ============================================
-// Membership Options with Real Pricing
+// Membership Options (Informational Only)
 // ============================================
 interface MembershipOption {
   id: string;
@@ -56,8 +56,8 @@ const copy = {
       en: 'Choose your Mobilis membership',
     },
     intro: {
-      nl: 'Kies hieronder het membership dat het beste bij je past. Na het kiezen ga je direct verder naar het aanmeldformulier.',
-      en: 'Select the membership that fits you best. After selecting, you will proceed to the sign-up form.',
+      nl: 'Bekijk hieronder de memberships bij Mobilis CrossFit. In het aanmeldformulier kies je welk membership je wilt starten.',
+      en: 'Below you can see the Mobilis memberships. You will select your membership inside the sign-up form.',
     },
   },
   membership: {
@@ -69,14 +69,30 @@ const copy = {
       nl: 'Populairste keuze',
       en: 'Most popular',
     },
+    selectInForm: {
+      nl: 'Je kiest je membership in het aanmeldformulier hieronder.',
+      en: 'You select your membership inside the sign-up form below.',
+    },
   },
-  cta: {
-    nl: 'Ga verder met aanmelden',
-    en: 'Continue to sign up',
+  startDate: {
+    title: {
+      nl: 'Startdatum',
+      en: 'Start date',
+    },
+    text: {
+      nl: 'Je kiest in het formulier zelf je startdatum (21 december of een datum in januari). Zorg dat je vóór vrijdag 19 december bent aangemeld.',
+      en: 'You choose your start date in the form (21 December or a date in January). Make sure to sign up before Friday 19 December.',
+    },
   },
-  selectFirst: {
-    nl: 'Selecteer eerst een membership hierboven',
-    en: 'Select a membership above first',
+  proRata: {
+    title: {
+      nl: 'Eerste incasso',
+      en: 'First billing',
+    },
+    text: {
+      nl: 'De eerste automatische incasso bij Mobilis kan bestaan uit een combinatie van resterende dagen van de maand en de volgende volledige maand.',
+      en: 'The first billing at Mobilis may include a combination of remaining days of the month and the next full month.',
+    },
   },
   formSection: {
     title: {
@@ -109,26 +125,19 @@ const copy = {
 };
 
 // ============================================
-// Membership Card Component
+// Membership Card Component (Non-clickable)
 // ============================================
 interface MembershipCardProps {
   option: MembershipOption;
   lang: Language;
-  isSelected: boolean;
-  onSelect: () => void;
 }
 
-function MembershipCard({ option, lang, isSelected, onSelect }: MembershipCardProps) {
+function MembershipCard({ option, lang }: MembershipCardProps) {
   return (
-    <button
-      onClick={onSelect}
-      className={`relative w-full p-6 rounded-xl border-2 text-left transition-all duration-200 ${
-        isSelected
-          ? 'border-cfl-orange bg-cfl-orange/5 shadow-lg scale-[1.02]'
-          : 'border-cfl-gray-medium bg-white hover:border-cfl-orange/50 hover:shadow-md'
-      } ${option.highlight ? 'ring-2 ring-cfl-yellow ring-offset-2' : ''}`}
-      role="radio"
-      aria-checked={isSelected}
+    <div
+      className={`relative w-full p-6 rounded-xl border-2 border-cfl-gray-medium bg-white ${
+        option.highlight ? 'ring-2 ring-cfl-yellow ring-offset-2' : ''
+      }`}
     >
       {/* Popular badge */}
       {option.highlight && (
@@ -141,19 +150,10 @@ function MembershipCard({ option, lang, isSelected, onSelect }: MembershipCardPr
 
       <div className="flex flex-col h-full">
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
-          <div>
-            <h3 className={`font-bold text-xl ${isSelected ? 'text-cfl-orange' : 'text-cfl-dark'}`}>
-              {option.name[lang]}
-            </h3>
-          </div>
-          <div
-            className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
-              isSelected ? 'border-cfl-orange bg-cfl-orange' : 'border-gray-300'
-            }`}
-          >
-            {isSelected && <CheckIcon className="w-4 h-4 text-white" />}
-          </div>
+        <div className="mb-4">
+          <h3 className="font-bold text-xl text-cfl-dark">
+            {option.name[lang]}
+          </h3>
         </div>
 
         {/* Price */}
@@ -168,7 +168,29 @@ function MembershipCard({ option, lang, isSelected, onSelect }: MembershipCardPr
           <p className="text-cfl-orange font-medium">{option.credits[lang]}</p>
         </div>
       </div>
-    </button>
+    </div>
+  );
+}
+
+// ============================================
+// Info Icon Component
+// ============================================
+function InfoIcon({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
   );
 }
 
@@ -177,14 +199,6 @@ function MembershipCard({ option, lang, isSelected, onSelect }: MembershipCardPr
 // ============================================
 export default function MembershipPage() {
   const [lang, setLang] = useState<Language>('nl');
-  const [selectedMembership, setSelectedMembership] = useState<string | null>(null);
-
-  const scrollToForm = () => {
-    const formElement = document.getElementById('ghl-form-placeholder');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -219,33 +233,61 @@ export default function MembershipPage() {
       </section>
 
       {/* ============================================
-          MEMBERSHIP SELECTION SECTION
+          MEMBERSHIP OVERVIEW SECTION
           ============================================ */}
       <section className="pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6">
-          {/* Membership Cards */}
-          <div className="grid gap-6 md:grid-cols-3 mb-10" role="radiogroup">
+          {/* Membership Cards (Not clickable) */}
+          <div className="grid gap-6 md:grid-cols-3 mb-8">
             {membershipOptions.map((option) => (
               <MembershipCard
                 key={option.id}
                 option={option}
                 lang={lang}
-                isSelected={selectedMembership === option.id}
-                onSelect={() => setSelectedMembership(option.id)}
               />
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="text-center space-y-3">
-            {selectedMembership ? (
-              <CTAButton onClick={scrollToForm}>{copy.cta[lang]}</CTAButton>
-            ) : (
-              <>
-                <CTAButton disabled>{copy.cta[lang]}</CTAButton>
-                <p className="text-sm text-gray-500">{copy.selectFirst[lang]}</p>
-              </>
-            )}
+          {/* Select in form notice */}
+          <div className="text-center bg-cfl-yellow/20 border border-cfl-yellow rounded-lg px-6 py-4 mb-10">
+            <p className="text-cfl-dark font-medium">
+              {copy.membership.selectInForm[lang]}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+          START DATE & PRO-RATA INFO SECTION
+          ============================================ */}
+      <section className="py-12 md:py-16 bg-cfl-gray-light">
+        <div className="max-w-content mx-auto px-6">
+          <div className="grid gap-8 md:grid-cols-2">
+            {/* Start Date Info */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-cfl-orange/10 flex items-center justify-center">
+                  <CalendarIcon className="w-5 h-5 text-cfl-orange" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-cfl-dark mb-2">{copy.startDate.title[lang]}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{copy.startDate.text[lang]}</p>
+              </div>
+            </div>
+
+            {/* Pro-rata Info */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-cfl-orange/10 flex items-center justify-center">
+                  <InfoIcon className="w-5 h-5 text-cfl-orange" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-cfl-dark mb-2">{copy.proRata.title[lang]}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{copy.proRata.text[lang]}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -253,7 +295,7 @@ export default function MembershipPage() {
       {/* ============================================
           GHL FORM SECTION
           ============================================ */}
-      <section className="py-16 md:py-20 bg-cfl-gray-light">
+      <section className="py-16 md:py-20">
         <div className="max-w-content mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-cfl-dark mb-3 text-center">
             {copy.formSection.title[lang]}
@@ -265,7 +307,7 @@ export default function MembershipPage() {
           {/* GHL Form Placeholder */}
           <div
             id="ghl-form-placeholder"
-            className="bg-white rounded-xl border-2 border-dashed border-cfl-gray-medium p-12 text-center scroll-mt-20"
+            className="bg-cfl-gray-light rounded-xl border-2 border-dashed border-cfl-gray-medium p-12 text-center mt-10"
           >
             <div className="text-gray-400">
               <svg
@@ -284,11 +326,6 @@ export default function MembershipPage() {
               <p className="text-lg font-medium mb-2">GHL Form Placeholder</p>
               <p className="text-sm">
                 GHL embed code will be inserted here manually.
-              </p>
-              <p className="text-xs mt-4 font-mono bg-gray-100 rounded px-3 py-2 inline-block">
-                {selectedMembership
-                  ? `Selected: ${selectedMembership}`
-                  : 'No membership selected'}
               </p>
             </div>
           </div>
