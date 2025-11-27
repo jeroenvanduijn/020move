@@ -8,22 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // CrossFit Leiden brand colors
+        // CrossFit Leiden brand colors (official)
         cfl: {
-          orange: '#FF6B35',
-          'orange-dark': '#E55A2B',
-          yellow: '#FFD23F',
-          'yellow-dark': '#E5BC38',
+          yellow: '#F8E43A',
+          orange: '#EF6C00',
+          'orange-hover': '#D65F00',
           dark: '#1A1A1A',
-          gray: '#2D2D2D',
           'gray-light': '#F5F5F5',
+          'gray-medium': '#E5E5E5',
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       maxWidth: {
-        'content': '800px',
+        'content': '760px',
       },
     },
   },

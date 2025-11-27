@@ -5,11 +5,11 @@ import '../styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Overstap naar Mobilis CrossFit | CrossFit 020',
-  description: 'Speciaal overstap-aanbod voor CrossFit 020 leden naar Mobilis CrossFit. Train 3 maanden bij Mobilis terwijl je nog maar 2 maanden betaalt.',
+  title: 'Jouw trainingsplek na CrossFit 020 | Overstap naar Mobilis',
+  description: 'CrossFit 020 sluit. We hebben een zorgeloze overgang geregeld bij Mobilis CrossFit: maand 1-2 via 020, maand 3 gratis, daarna doorlopend bij Mobilis.',
   openGraph: {
-    title: 'Overstap naar Mobilis CrossFit | CrossFit 020',
-    description: 'Speciaal overstap-aanbod voor CrossFit 020 leden naar Mobilis CrossFit.',
+    title: 'Jouw trainingsplek na CrossFit 020',
+    description: 'Zorgeloze overgang naar Mobilis CrossFit voor CrossFit 020 leden.',
     type: 'website',
   },
 };
