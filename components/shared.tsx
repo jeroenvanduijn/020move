@@ -373,6 +373,83 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: {
+      nl: 'Heeft Mobilis ook Hyrox training?',
+      en: 'Does Mobilis offer Hyrox training?',
+    },
+    answer: {
+      nl: 'Ja, Hyrox is nieuw bij Mobilis. Dit is een mix van hardlopen en functional fitness, perfect als je van competitie houdt.',
+      en: 'Yes, Hyrox is new at Mobilis. It\'s a mix of running and functional fitness, perfect if you love competition.',
+    },
+    englishSummary: 'Yes, Hyrox training is available.',
+  },
+  {
+    question: {
+      nl: 'Kan ik ook personal training doen bij Mobilis?',
+      en: 'Can I do personal training at Mobilis?',
+    },
+    answer: {
+      nl: 'Ja, Mobilis biedt personal training aan voor persoonlijke doelen, techniekverbetering of revalidatie.',
+      en: 'Yes, Mobilis offers personal training for personal goals, technique improvement or rehabilitation.',
+    },
+    englishSummary: 'Yes, personal training is available.',
+  },
+  {
+    question: {
+      nl: 'Is er fysiotherapie beschikbaar?',
+      en: 'Is physiotherapy available?',
+    },
+    answer: {
+      nl: 'Ja, fysiotherapie is direct in de box beschikbaar. Je hoeft geen externe afspraken te maken.',
+      en: 'Yes, physiotherapy is available on-site. You don\'t need to make external appointments.',
+    },
+    englishSummary: 'Yes, physiotherapy is available on-site.',
+  },
+  {
+    question: {
+      nl: 'Heeft Mobilis CrossFit Kids of een programma voor ouderen?',
+      en: 'Does Mobilis have CrossFit Kids or a program for seniors?',
+    },
+    answer: {
+      nl: 'Ja, er is CrossFit Kids voor kinderen en CrossFit Masters voor 55-plussers. Beide kosten €100/maand.',
+      en: 'Yes, there\'s CrossFit Kids for children and CrossFit Masters for 55+. Both cost €100/month.',
+    },
+    englishSummary: 'Yes, Kids and Masters (55+) programs available for €100/month.',
+  },
+  {
+    question: {
+      nl: 'Kan ik op beide Mobilis locaties trainen?',
+      en: 'Can I train at both Mobilis locations?',
+    },
+    answer: {
+      nl: 'Ja, met elk membership kun je trainen op zowel locatie Amstel als Buitenveldert.',
+      en: 'Yes, with any membership you can train at both the Amstel and Buitenveldert locations.',
+    },
+    englishSummary: 'Yes, your membership works at both Amsterdam locations.',
+  },
+  {
+    question: {
+      nl: 'Wat zijn de tarieven bij Mobilis na de 3 maanden?',
+      en: 'What are the rates at Mobilis after the 3 months?',
+    },
+    answer: {
+      nl: '2x per week: €102/maand, 3x per week: €112/maand, Onbeperkt: €129/maand, 10-rittenkaart: €169 (eenmalig).',
+      en: '2x per week: €102/month, 3x per week: €112/month, Unlimited: €129/month, 10-class pass: €169 (one-time).',
+    },
+    englishSummary: '2x/week €102, 3x/week €112, Unlimited €129/month.',
+  },
+  {
+    question: {
+      nl: 'Hoe is de sfeer bij Mobilis?',
+      en: 'What\'s the atmosphere like at Mobilis?',
+    },
+    answer: {
+      nl: 'Mobilis heeft een 4.9 rating op Google met 114+ reviews. Leden noemen de coaching, persoonlijke aandacht en fijne community als belangrijkste pluspunten. De box is geschikt voor zowel beginners als gevorderden.',
+      en: 'Mobilis has a 4.9 rating on Google with 114+ reviews. Members highlight the coaching, personal attention and great community. The box is suitable for both beginners and advanced athletes.',
+    },
+    englishSummary: '4.9 stars on Google. Members praise coaching quality and welcoming community.',
+  },
+  {
+    question: {
       nl: 'Hoe kan ik vragen stellen?',
       en: 'How can I ask questions?',
     },
