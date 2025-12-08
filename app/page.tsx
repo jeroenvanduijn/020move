@@ -218,7 +218,7 @@ const copy = {
       nl: [
         'Je kiest nu je Mobilis membership.',
         'Je betaalt direct voor 2 maanden en je krijgt 3 maanden trainen.',
-        'Je kiest zelf je startdatum (21 december of een datum in januari).',
+        'Je kunt starten vanaf januari.',
         'Deze actie is geldig t/m vrijdag 19 december.',
         'Vanaf maand 4 start de automatische betaling via Mobilis.',
         'Vanaf maand 4 geldt een kalendermaand opzegtermijn.',
@@ -227,7 +227,7 @@ const copy = {
       en: [
         'Choose your Mobilis membership now.',
         'You pay for 2 months and receive 3 months of training.',
-        'You can choose your own start date (21 December or a date in January).',
+        'You can start from January.',
         'This offer is valid until Friday 19 December.',
         'From month 4, automatic billing starts at Mobilis.',
         'From month 4, a one-calendar-month cancellation period applies.',
@@ -312,16 +312,12 @@ const copy = {
   },
   startDate: {
     title: {
-      nl: 'Kies je startdatum',
-      en: 'Choose your start date',
+      nl: 'Startdatum',
+      en: 'Start date',
     },
     text: {
-      nl: 'Je kunt zelf je eerste dag kiezen. Wil je al starten op 21 december, of liever in januari? Beide kan. Zorg er wel voor dat je vóór vrijdag 19 december bent aangemeld, zodat we alles tijdig kunnen verwerken.',
-      en: 'You can choose your own start date. Want to begin on 21 December, or rather in January? Both are possible. Just complete your sign-up before Friday 19 December so we can process everything in time.',
-    },
-    options: {
-      nl: ['Start 21 december', 'Start in januari'],
-      en: ['Start 21 December', 'Start in January'],
+      nl: 'Je kunt starten vanaf januari. Zorg er wel voor dat je vóór vrijdag 19 december bent aangemeld, zodat we alles tijdig kunnen verwerken.',
+      en: 'You can start from January. Just complete your sign-up before Friday 19 December so we can process everything in time.',
     },
   },
   ctaSection: {
@@ -642,21 +638,9 @@ export default function LandingPage() {
             </h2>
           </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          <p className="text-lg text-gray-700 leading-relaxed">
             {copy.startDate.text[lang]}
           </p>
-
-          <div className="flex flex-wrap gap-4">
-            {copy.startDate.options[lang].map((option, index) => (
-              <div
-                key={index}
-                className="inline-flex items-center gap-2 bg-cfl-gray-light border border-cfl-gray-medium rounded-lg px-5 py-3"
-              >
-                <CheckIcon className="w-5 h-5 text-cfl-orange" />
-                <span className="font-medium text-cfl-dark">{option}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

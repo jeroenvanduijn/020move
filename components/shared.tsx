@@ -300,10 +300,10 @@ export const faqItems: FAQItem[] = [
       en: 'How exactly does the transition to Mobilis work?',
     },
     answer: {
-      nl: 'Je kiest je Mobilis membership en betaalt direct voor 2 maanden. Je krijgt 3 maanden trainen (1 maand gratis). Je kiest zelf je startdatum: 21 december of een datum in januari. Vanaf maand 4 loopt je membership automatisch verder via Mobilis.',
-      en: 'You choose your Mobilis membership and pay for 2 months upfront. You receive 3 months of training (1 month free). You choose your own start date: 21 December or a date in January. From month 4, your membership continues automatically at Mobilis.',
+      nl: 'Je kiest je Mobilis membership en betaalt direct voor 2 maanden. Je krijgt 3 maanden trainen (1 maand gratis). Je kunt starten vanaf januari. Vanaf maand 4 loopt je membership automatisch verder via Mobilis.',
+      en: 'You choose your Mobilis membership and pay for 2 months upfront. You receive 3 months of training (1 month free). You can start from January. From month 4, your membership continues automatically at Mobilis.',
     },
-    englishSummary: 'Pay 2 months, train 3 months (1 free), choose your start date, then continues at Mobilis.',
+    englishSummary: 'Pay 2 months, train 3 months (1 free), start from January, then continues at Mobilis.',
   },
   {
     question: {
