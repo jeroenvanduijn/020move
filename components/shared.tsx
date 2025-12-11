@@ -322,10 +322,10 @@ export const faqItems: FAQItem[] = [
       en: 'Until when can I sign up for this offer?',
     },
     answer: {
-      nl: 'Je moet je vóór vrijdag 19 december aanmelden, zodat we alles tijdig kunnen verwerken bij Mobilis.',
-      en: 'You need to sign up before Friday 19 December so we can process everything at Mobilis in time.',
+      nl: 'Je moet je vóór 31 december aanmelden, zodat we alles tijdig kunnen verwerken bij Mobilis.',
+      en: 'You need to sign up before 31 December so we can process everything at Mobilis in time.',
     },
-    englishSummary: 'Sign up before Friday 19 December.',
+    englishSummary: 'Sign up before 31 December.',
   },
   {
     question: {

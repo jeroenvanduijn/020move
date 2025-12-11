@@ -80,8 +80,8 @@ const copy = {
       en: 'Start date',
     },
     text: {
-      nl: 'Je kunt starten vanaf januari. Zorg dat je vóór vrijdag 19 december bent aangemeld.',
-      en: 'You can start from January. Make sure to sign up before Friday 19 December.',
+      nl: 'Je kunt starten vanaf januari. Zorg dat je vóór 31 december bent aangemeld.',
+      en: 'You can start from January. Make sure to sign up before 31 December.',
     },
   },
   proRata: {

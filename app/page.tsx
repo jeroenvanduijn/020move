@@ -219,7 +219,7 @@ const copy = {
         'Je kiest nu je Mobilis membership.',
         'Je betaalt direct voor 2 maanden en je krijgt 3 maanden trainen.',
         'Je kunt starten vanaf januari.',
-        'Deze actie is geldig t/m vrijdag 19 december.',
+        'Deze actie is geldig t/m 31 december.',
         'Vanaf maand 4 start de automatische betaling via Mobilis.',
         'Vanaf maand 4 geldt een kalendermaand opzegtermijn.',
         'Vanaf maand 4 kun je upgraden of downgraden.',
@@ -228,7 +228,7 @@ const copy = {
         'Choose your Mobilis membership now.',
         'You pay for 2 months and receive 3 months of training.',
         'You can start from January.',
-        'This offer is valid until Friday 19 December.',
+        'This offer is valid until 31 December.',
         'From month 4, automatic billing starts at Mobilis.',
         'From month 4, a one-calendar-month cancellation period applies.',
         'From month 4, you may upgrade or downgrade.',
@@ -316,8 +316,8 @@ const copy = {
       en: 'Start date',
     },
     text: {
-      nl: 'Je kunt starten vanaf januari. Zorg er wel voor dat je vóór vrijdag 19 december bent aangemeld, zodat we alles tijdig kunnen verwerken.',
-      en: 'You can start from January. Just complete your sign-up before Friday 19 December so we can process everything in time.',
+      nl: 'Je kunt starten vanaf januari. Zorg er wel voor dat je vóór 31 december bent aangemeld.',
+      en: 'You can start from January. Just complete your sign-up before 31 December.',
     },
   },
   ctaSection: {
