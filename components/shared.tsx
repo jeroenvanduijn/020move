@@ -256,10 +256,10 @@ export const faqItems: FAQItem[] = [
       en: 'Why is CrossFit 020 closing?',
     },
     answer: {
-      nl: 'We hebben lang gezocht naar een nieuwe locatie in Amsterdam, maar de huurprijzen zijn zo hoog geworden dat we geen financieel gezonde optie konden vinden. Daarnaast is er nog een restschuld uit het verleden, waardoor verhuizen binnen Amsterdam niet haalbaar is.',
-      en: 'We searched extensively for a new location in Amsterdam, but rental prices have become too high for a financially viable option. Combined with existing debt, relocating within Amsterdam is not feasible.',
+      nl: 'We hebben de afgelopen anderhalf jaar alles onderzocht om CrossFit 020 in Amsterdam voort te zetten. Helaas liepen we tegen drie grote problemen aan:\n\n1. We kregen geen nieuw langlopend huurcontract. De verhuurder zag ons niet als "ideale huurder" en wilde liever een traditioneler fitnessconcept op deze plek.\n2. Alternatieve locaties in Amsterdam bleken óf extreem duur, óf alleen tijdelijk beschikbaar door herontwikkeling.\n3. Zowel interne coaches als externe partijen hebben serieus naar een overname gekeken, maar uiteindelijk vond niemand het financiële risico verantwoord.\n\nWe respecteren die keuzes volledig. Het betekent wel dat er geen realistische manier is om CrossFit 020 in Amsterdam door te laten gaan.',
+      en: 'We spent the past year and a half exploring every option to continue CrossFit 020 in Amsterdam. Unfortunately, we faced three major problems: no long-term lease renewal, extremely expensive or temporary alternative locations, and no internal or external party willing to take on the financial risk.',
     },
-    englishSummary: 'We could not find an affordable new location in Amsterdam.',
+    englishSummary: 'We could not secure a long-term lease, alternative locations were too expensive or temporary, and no internal or external party felt comfortable taking on the financial risk. Because of this, continuing CrossFit 020 in Amsterdam is not realistic.',
   },
   {
     question: {
@@ -267,10 +267,10 @@ export const faqItems: FAQItem[] = [
       en: 'When is the last training day?',
     },
     answer: {
-      nl: 'De laatste trainingsdag bij CrossFit 020 is vrijdag 20 december. Tot die datum blijven we open en draaien we de lessen zoals normaal.',
-      en: 'The last training day at CrossFit 020 is Friday 20 December. Until then, we remain open and classes continue as normal.',
+      nl: 'De laatste dag dat we lesgeven is dinsdag 30 december. Tot en met die dag blijven we open en draaien we de lessen zoals normaal. In de dagen daarvoor beginnen we rustig met het leeghalen van de ruimte, maar er kan gewoon getraind worden tot de laatste dag.',
+      en: 'The last day we teach classes is Tuesday 30 December. Until that day, we remain open and classes continue as normal. We will start clearing the space in the days before, but you can train until the last day.',
     },
-    englishSummary: 'Last training day is Friday 20 December.',
+    englishSummary: 'The last training day is Tuesday 30 December. Classes run as normal until that day.',
   },
   {
     question: {
@@ -278,10 +278,10 @@ export const faqItems: FAQItem[] = [
       en: 'Will there be a farewell workout?',
     },
     answer: {
-      nl: 'Ja. We organiseren een speciale laatste workout om samen af te sluiten. De datum en tijden maken we snel bekend.',
-      en: 'Yes. We are organizing a special final workout to close together. Date and times will be announced soon.',
+      nl: 'Ja. We organiseren een speciale afscheidsworkout om dit hoofdstuk samen af te sluiten. De exacte datum en tijd communiceren we binnenkort via e-mail en onze kanalen.',
+      en: 'Yes. We will host a special farewell workout to close this chapter together. Date and time will be shared soon via email and our channels.',
     },
-    englishSummary: 'Yes, details coming soon.',
+    englishSummary: 'Yes. We will host a special farewell workout. Date and time will be shared soon.',
   },
   {
     question: {
@@ -289,10 +289,10 @@ export const faqItems: FAQItem[] = [
       en: 'What happens to my CrossFit 020 subscription?',
     },
     answer: {
-      nl: 'Niemand betaalt voor een periode waarin de gym niet open is. We sturen een aparte mail met alle details over incasso, vooruitbetalingen, credits en overige vragen.',
-      en: 'No one pays for a period when the gym is closed. A separate email will explain all details about billing, prepayments, credits and other questions.',
+      nl: 'Niemand betaalt voor een periode waarin de gym niet open is. In een aparte e-mail ontvang je een duidelijk overzicht van:\n\n• wat er gebeurt met incasso en vooruitbetalingen\n• welke bedragen worden teruggestort voor periodes na december\n• wat er gebeurt met eventuele credits, strippen of andere producten',
+      en: 'You will not pay for any period we are closed. A separate email will provide a clear overview of what happens with billing and advance payments, which amounts will be refunded for periods after December, and what happens with any credits, class passes or other products.',
     },
-    englishSummary: 'You will not pay for any period we are closed. Details via email.',
+    englishSummary: 'You will not pay for any period we are closed. A separate email will explain refunds, advance payments and remaining credits.',
   },
   {
     question: {
@@ -318,25 +318,25 @@ export const faqItems: FAQItem[] = [
   },
   {
     question: {
-      nl: 'Tot wanneer kan ik me aanmelden voor deze actie?',
-      en: 'Until when can I sign up for this offer?',
+      nl: 'Tot wanneer kan ik me aanmelden voor Mobilis?',
+      en: 'Until when can I sign up for Mobilis?',
     },
     answer: {
-      nl: 'Je moet je vóór 31 december aanmelden, zodat we alles tijdig kunnen verwerken bij Mobilis.',
-      en: 'You need to sign up before 31 December so we can process everything at Mobilis in time.',
+      nl: 'Je kunt je aanmelden voor het Mobilis-aanbod tot en met 31 december. Wil je starten op 21 december, meld je dan bij voorkeur vóór 19 december aan. Dan hebben we genoeg tijd om je lidmaatschap aan de kant van Mobilis goed in te richten.',
+      en: 'You can sign up for the Mobilis offer until 31 December. If you want to start on 21 December, we recommend signing up before the 19th so everything can be processed in time.',
     },
-    englishSummary: 'Sign up before 31 December.',
+    englishSummary: 'You can sign up for the Mobilis offer until 31 December. If you want to start on 21 December, we recommend signing up before the 19th so everything can be processed in time.',
   },
   {
     question: {
-      nl: 'Waarom is Fabian geen nieuwe eigenaar geworden?',
-      en: 'Why didn\'t Fabian become the new owner?',
+      nl: 'Waarom heeft niemand CrossFit 020 overgenomen?',
+      en: 'Why hasn\'t anyone taken over CrossFit 020?',
     },
     answer: {
-      nl: 'Fabian heeft serieus gekeken naar de mogelijkheid om 020 over te nemen. Uiteindelijk heeft hij besloten deze stap niet te zetten. Dat respecteren we volledig, maar het betekent dat er niemand is om de gym in Amsterdam voort te zetten.',
-      en: 'Fabian seriously considered taking over 020. Ultimately, he decided not to proceed. We fully respect this, but it means there is no one to continue the gym in Amsterdam.',
+      nl: 'De afgelopen maanden hebben we met verschillende partijen gesproken over een mogelijke overname van CrossFit 020. We hebben dit zowel intern met coaches als met externe geïnteresseerden onderzocht. Eén partij is hier zelfs heel ver in gegaan.\n\nUiteindelijk kwam elke partij tot dezelfde conclusie: het financiële risico was te groot. Door de hoge huren in Amsterdam en de onzekerheid van de markt voelde niemand zich comfortabel om deze stap te zetten. Dat respecteren we volledig, maar het betekent wel dat er niemand is die CrossFit 020 in Amsterdam kan voortzetten.',
+      en: 'Over the past months, we spoke with several parties about a possible takeover of CrossFit 020. We explored this with internal coaches and external interested parties. One party even went very far in this process.\n\nIn the end, every party came to the same conclusion: the financial risk was too high. Due to high rents in Amsterdam and market uncertainty, no one felt comfortable taking this step. We fully respect that, but it means there is no party who can continue CrossFit 020 in Amsterdam.',
     },
-    englishSummary: 'Fabian decided not to take over the gym.',
+    englishSummary: 'Several internal and external parties explored taking over CrossFit 020. In the end, everyone decided that the financial risk was too high, mainly because of high rents in Amsterdam and market uncertainty. We respect that, and it means there is no party who can continue CrossFit 020 in Amsterdam.',
   },
   {
     question: {
