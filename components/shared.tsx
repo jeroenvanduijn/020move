@@ -300,21 +300,21 @@ export const faqItems: FAQItem[] = [
       en: 'How exactly does the transition to Mobilis work?',
     },
     answer: {
-      nl: 'Je kiest je Mobilis membership en betaalt direct voor 2 maanden. Je krijgt 3 maanden trainen (1 maand gratis). Je kunt starten vanaf januari. Vanaf maand 4 loopt je membership automatisch verder via Mobilis.',
-      en: 'You choose your Mobilis membership and pay for 2 months upfront. You receive 3 months of training (1 month free). You can start from January. From month 4, your membership continues automatically at Mobilis.',
+      nl: 'Je kiest een membership (2x of 3x per week) en betaalt direct voor 2 maanden. Daarmee train je heel Q1 2026: van 1 januari t/m 31 maart. Vanaf 1 april 2026 start je automatische incasso bij Mobilis. Let op: dit aanbod geldt alleen voor locatie Amstel en de Onbeperkt-variant valt buiten deze actie.',
+      en: 'Choose a membership (2x or 3x per week) and pay for 2 months upfront. This covers all of Q1 2026: January 1 through March 31. From April 1, 2026, your automatic direct debit starts at Mobilis. Note: this offer only applies to the Amstel location and the Unlimited option is not part of this deal.',
     },
-    englishSummary: 'Pay 2 months, train 3 months (1 free), start from January, then continues at Mobilis.',
+    englishSummary: 'Pay 2 months, train all of Q1 2026 (Jan-Mar). From April 1, automatic billing starts. Only for Amstel location, 2x or 3x per week memberships.',
   },
   {
     question: {
-      nl: 'Wat gebeurt er na de 3 maanden overgangsperiode?',
-      en: 'What happens after the 3-month transition period?',
+      nl: 'Wat gebeurt er na Q1 2026?',
+      en: 'What happens after Q1 2026?',
     },
     answer: {
-      nl: 'Na 3 maanden loopt je gekozen membership automatisch verder bij Mobilis met een kalendermaand opzegtermijn. Je kunt dan ook upgraden of downgraden naar een ander membership.',
-      en: 'After the first 3 months, your membership continues automatically at Mobilis under their standard cancellation terms. You can also upgrade or downgrade to a different membership.',
+      nl: 'Vanaf 1 april 2026 gaan alle leden over op een automatische incasso bij Mobilis, ongeacht wanneer je tijdens Q1 bent gestart. Vanaf dat moment geldt een kalendermaand opzegtermijn en kun je upgraden of downgraden naar een ander membership.',
+      en: 'From April 1, 2026, all members transition to automatic direct debit at Mobilis, regardless of when you started during Q1. From that point, a one-calendar-month cancellation period applies and you can upgrade or downgrade to a different membership.',
     },
-    englishSummary: 'After the first 3 months your membership continues automatically at Mobilis under their standard cancellation terms.',
+    englishSummary: 'From April 1, 2026, all members go to automatic direct debit. One-month cancellation period applies.',
   },
   {
     question: {
@@ -322,10 +322,10 @@ export const faqItems: FAQItem[] = [
       en: 'Until when can I sign up for Mobilis?',
     },
     answer: {
-      nl: 'Je kunt je aanmelden voor het Mobilis-aanbod tot en met 31 december. Wil je starten op 21 december, meld je dan bij voorkeur vóór 19 december aan. Dan hebben we genoeg tijd om je lidmaatschap aan de kant van Mobilis goed in te richten.',
-      en: 'You can sign up for the Mobilis offer until 31 December. If you want to start on 21 December, we recommend signing up before the 19th so everything can be processed in time.',
+      nl: 'Je kunt je aanmelden voor het Mobilis-aanbod tot en met 31 december 2025. De overgangsperiode loopt van 1 januari t/m 31 maart 2026 (Q1). Vanaf 1 april 2026 start voor iedereen de automatische incasso, ongeacht wanneer je bent begonnen.',
+      en: 'You can sign up for the Mobilis offer until December 31, 2025. The transition period runs from January 1 through March 31, 2026 (Q1). From April 1, 2026, automatic direct debit starts for everyone, regardless of when you started.',
     },
-    englishSummary: 'You can sign up for the Mobilis offer until 31 December. If you want to start on 21 December, we recommend signing up before the 19th so everything can be processed in time.',
+    englishSummary: 'Sign up by December 31, 2025. The Q1 2026 transition period applies to everyone. From April 1, automatic billing starts.',
   },
   {
     question: {
@@ -399,10 +399,10 @@ export const faqItems: FAQItem[] = [
       en: 'Is physiotherapy available?',
     },
     answer: {
-      nl: 'Ja, fysiotherapie is direct in de box beschikbaar. Je hoeft geen externe afspraken te maken.',
-      en: 'Yes, physiotherapy is available on-site. You don\'t need to make external appointments.',
+      nl: 'Ja, fysiotherapie is beschikbaar op locatie Buitenveldert. Je hoeft geen externe afspraken te maken.',
+      en: 'Yes, physiotherapy is available at the Buitenveldert location. No need for external appointments.',
     },
-    englishSummary: 'Yes, physiotherapy is available on-site.',
+    englishSummary: 'Yes, physiotherapy is available at the Buitenveldert location.',
   },
   {
     question: {
@@ -410,10 +410,10 @@ export const faqItems: FAQItem[] = [
       en: 'Does Mobilis have CrossFit Kids or a program for seniors?',
     },
     answer: {
-      nl: 'Ja, er is CrossFit Kids voor kinderen en CrossFit Masters voor 55-plussers. Beide kosten €100/maand.',
-      en: 'Yes, there\'s CrossFit Kids for children and CrossFit Masters for 55+. Both cost €100/month.',
+      nl: 'Ja, er is CrossFit Kids voor kinderen en CrossFit Masters voor 55-plussers. Beide worden aangeboden als rittenkaart: 10 trainingen voor €100.',
+      en: 'Yes, there\'s CrossFit Kids for children and CrossFit Masters for 55+. Both are offered as class passes: 10 classes for €100.',
     },
-    englishSummary: 'Yes, Kids and Masters (55+) programs available for €100/month.',
+    englishSummary: 'Yes, Kids and Masters (55+) programs available. 10 classes for €100.',
   },
   {
     question: {
@@ -421,21 +421,21 @@ export const faqItems: FAQItem[] = [
       en: 'Can I train at both Mobilis locations?',
     },
     answer: {
-      nl: 'Ja, met elk membership kun je trainen op zowel locatie Amstel als Buitenveldert.',
-      en: 'Yes, with any membership you can train at both the Amstel and Buitenveldert locations.',
+      nl: 'Dit aanbod geldt alleen voor locatie Amstel. Heb je interesse in locatie Buitenveldert? Neem dan contact op voor een individueel voorstel.',
+      en: 'This offer only applies to the Amstel location. Interested in the Buitenveldert location? Contact us for an individual proposal.',
     },
-    englishSummary: 'Yes, your membership works at both Amsterdam locations.',
+    englishSummary: 'This offer is for Amstel only. Contact us for Buitenveldert options.',
   },
   {
     question: {
-      nl: 'Wat zijn de tarieven bij Mobilis na de 3 maanden?',
-      en: 'What are the rates at Mobilis after the 3 months?',
+      nl: 'Wat zijn de tarieven bij Mobilis vanaf 1 april 2026?',
+      en: 'What are the rates at Mobilis from April 1, 2026?',
     },
     answer: {
-      nl: '2x per week: €102/maand, 3x per week: €112/maand, Onbeperkt: €129/maand, 10-rittenkaart: €169 (eenmalig).',
-      en: '2x per week: €102/month, 3x per week: €112/month, Unlimited: €129/month, 10-class pass: €169 (one-time).',
+      nl: '2x per week: €102/maand, 3x per week: €112/maand, Onbeperkt: €129/maand, 10-rittenkaart: €169 (eenmalig). CrossFit Kids en Masters: 10 trainingen voor €100 (rittenkaart).',
+      en: '2x per week: €102/month, 3x per week: €112/month, Unlimited: €129/month, 10-class pass: €169 (one-time). CrossFit Kids and Masters: 10 classes for €100 (class pass).',
     },
-    englishSummary: '2x/week €102, 3x/week €112, Unlimited €129/month.',
+    englishSummary: '2x/week €102, 3x/week €112, Unlimited €129/month. Kids/Masters: 10 classes for €100.',
   },
   {
     question: {

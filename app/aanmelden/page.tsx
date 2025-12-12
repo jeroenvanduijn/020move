@@ -37,13 +37,6 @@ const membershipOptions: MembershipOption[] = [
     perTraining: { nl: '€8,62 per training', en: '€8.62 per session' },
     credits: { nl: '13 credits p.m.', en: '13 credits/month' },
   },
-  {
-    id: 'unlimited',
-    name: { nl: 'Onbeperkt', en: 'Unlimited' },
-    price: '€129,-',
-    perTraining: { nl: '€4,96 per training (6x/wk)', en: '€4.96 per session (6x/wk)' },
-    credits: { nl: 'Onbeperkt', en: 'Unlimited' },
-  },
 ];
 
 // ============================================
@@ -56,8 +49,8 @@ const copy = {
       en: 'Choose your Mobilis membership',
     },
     intro: {
-      nl: 'Bekijk hieronder de memberships bij Mobilis CrossFit. In het aanmeldformulier kies je welk membership je wilt starten.',
-      en: 'Below you can see the Mobilis memberships. You will select your membership inside the sign-up form.',
+      nl: 'Kies uit 2x of 3x per week. Dit aanbod geldt alleen voor locatie Amstel. De Onbeperkt-variant valt buiten deze actie.',
+      en: 'Choose from 2x or 3x per week. This offer only applies to the Amstel location. The Unlimited option is not part of this deal.',
     },
   },
   membership: {
@@ -76,22 +69,22 @@ const copy = {
   },
   startDate: {
     title: {
-      nl: 'Startdatum',
-      en: 'Start date',
+      nl: 'Overgangsperiode Q1 2026',
+      en: 'Transition period Q1 2026',
     },
     text: {
-      nl: 'Je kunt starten vanaf januari. Zorg dat je vóór 31 december bent aangemeld.',
-      en: 'You can start from January. Make sure to sign up before 31 December.',
+      nl: 'Je traint van 1 januari t/m 31 maart 2026 bij Mobilis Amstel. Meld je aan vóór 31 december 2025.',
+      en: 'Train from January 1 to March 31, 2026 at Mobilis Amstel. Sign up before December 31, 2025.',
     },
   },
   proRata: {
     title: {
-      nl: 'Eerste incasso',
-      en: 'First billing',
+      nl: 'Automatische incasso vanaf 1 april 2026',
+      en: 'Automatic billing from April 1, 2026',
     },
     text: {
-      nl: 'De eerste automatische incasso bij Mobilis kan bestaan uit een combinatie van resterende dagen van de maand en de volgende volledige maand.',
-      en: 'The first billing at Mobilis may include a combination of remaining days of the month and the next full month.',
+      nl: 'Vanaf 1 april 2026 gaan alle leden over op een automatische incasso bij Mobilis, ongeacht wanneer je tijdens Q1 bent gestart.',
+      en: 'From April 1, 2026, all members transition to automatic direct debit at Mobilis, regardless of when you started during Q1.',
     },
   },
   formSection: {
@@ -112,13 +105,15 @@ const copy = {
     items: {
       nl: [
         'Je betaalt nu voor 2 maanden.',
-        'Je krijgt 3 maanden trainen (1 maand gratis).',
-        'Vanaf maand 4 loopt je membership automatisch door.',
+        'Je traint heel Q1 2026 (1 jan - 31 mrt).',
+        'Alleen voor locatie Amstel.',
+        'Vanaf 1 april 2026 start automatische incasso.',
       ],
       en: [
         'You pay for 2 months now.',
-        'You receive 3 months of training (1 month free).',
-        'From month 4, your membership continues automatically.',
+        'Train all of Q1 2026 (Jan 1 - Mar 31).',
+        'Only for the Amstel location.',
+        'From April 1, 2026, automatic billing starts.',
       ],
     },
   },
