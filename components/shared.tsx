@@ -311,10 +311,10 @@ export const faqItems: FAQItem[] = [
       en: 'What happens after Q1 2026?',
     },
     answer: {
-      nl: 'Vanaf 1 april 2026 gaan alle leden over op een automatische incasso bij Mobilis, ongeacht wanneer je tijdens Q1 bent gestart. Vanaf dat moment geldt een kalendermaand opzegtermijn en kun je upgraden of downgraden naar een ander membership.',
-      en: 'From April 1, 2026, all members transition to automatic direct debit at Mobilis, regardless of when you started during Q1. From that point, a one-calendar-month cancellation period applies and you can upgrade or downgrade to a different membership.',
+      nl: 'Vanaf 1 april 2026 gaan alle leden over op een automatische incasso bij Mobilis, ongeacht wanneer je tijdens Q1 bent gestart. Net als bij 020 worden incasso\'s gedaan in de laatste week van de maand ervoor. Vanaf dat moment geldt een kalendermaand opzegtermijn en kun je upgraden of downgraden naar een ander membership.',
+      en: 'From April 1, 2026, all members transition to automatic direct debit at Mobilis, regardless of when you started during Q1. Just like at 020, payments are collected in the last week of the preceding month. From that point, a one-calendar-month cancellation period applies and you can upgrade or downgrade to a different membership.',
     },
-    englishSummary: 'From April 1, 2026, all members go to automatic direct debit. One-month cancellation period applies.',
+    englishSummary: 'From April 1, 2026, all members go to automatic direct debit (collected in the last week of the preceding month). One-month cancellation period applies.',
   },
   {
     question: {

@@ -83,8 +83,8 @@ const copy = {
       en: 'Automatic billing from April 1, 2026',
     },
     text: {
-      nl: 'Vanaf 1 april 2026 gaan alle leden over op een automatische incasso bij Mobilis, ongeacht wanneer je tijdens Q1 bent gestart.',
-      en: 'From April 1, 2026, all members transition to automatic direct debit at Mobilis, regardless of when you started during Q1.',
+      nl: 'Vanaf 1 april 2026 gaan alle leden over op een automatische incasso bij Mobilis, ongeacht wanneer je tijdens Q1 bent gestart. Net als bij 020 worden incasso\'s gedaan in de laatste week van de maand ervoor.',
+      en: 'From April 1, 2026, all members transition to automatic direct debit at Mobilis, regardless of when you started during Q1. Just like at 020, payments are collected in the last week of the preceding month.',
     },
   },
   formSection: {
