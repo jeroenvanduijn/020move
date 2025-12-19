@@ -96,6 +96,10 @@ const copy = {
       nl: 'Vul hieronder je gegevens in om je aanmelding af te ronden.',
       en: 'Fill in your details below to complete your registration.',
     },
+    confirmation: {
+      nl: 'Na het invullen van het formulier en het doen van de betaling maakt Mobilis CrossFit zo snel mogelijk een account voor je aan. Je ontvangt per e-mail een bevestiging van dit account.',
+      en: 'After completing the form and payment, Mobilis CrossFit will create an account for you as soon as possible. You will receive an email confirmation of this account.',
+    },
   },
   transitionInfo: {
     title: {
@@ -295,9 +299,16 @@ export default function MembershipPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-cfl-dark mb-3 text-center">
             {copy.formSection.title[lang]}
           </h2>
-          <p className="text-gray-600 mb-10 text-center">
+          <p className="text-gray-600 mb-6 text-center">
             {copy.formSection.subtitle[lang]}
           </p>
+
+          {/* Confirmation Info */}
+          <div className="bg-cfl-gray-light border border-cfl-gray-medium rounded-lg p-4 mb-10 text-center">
+            <p className="text-gray-700 text-sm">
+              {copy.formSection.confirmation[lang]}
+            </p>
+          </div>
 
           {/* GHL Form Embed */}
           <div
